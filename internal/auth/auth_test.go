@@ -24,5 +24,5 @@ func TestSuccessfulAPIKey(t *testing.T) {
 	header["Authorization"] = []string{"ApiKey testing"}
 	key, err := GetAPIKey(header)
 	require.NoError(t, err, "")
-	require.NotEqual(t, "testing", key)
+	require.Equal(t, "testing", key)
 }
